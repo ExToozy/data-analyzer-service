@@ -35,8 +35,6 @@ public class KafkaConfig {
         props.put(ConsumerConfig.GROUP_ID_CONFIG, new TextXPath(this.settings, "//groupId").toString());
         props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, new TextXPath(this.settings, "//keyDeserializer").toString());
         props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, new TextXPath(this.settings, "//valueDeserializer").toString());
-//        props.put("spring.json.trusted.packages", new TextXPath(this.settings, "//trustedPackages").toString());
-
 
         ReceiverOptions<String, Object> receiverOptions = ReceiverOptions.create(props);
 
