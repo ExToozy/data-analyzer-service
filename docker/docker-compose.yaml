@@ -18,7 +18,7 @@ volumes:
 
 services:
   generator:
-    image: 'ilyalisov/data-generator-microservice:latest'
+    image: 'extoozy/data-generator-service:latest'
     networks:
       - app
     depends_on:
@@ -30,7 +30,7 @@ services:
       - '8081:8081'
 
   analyser:
-    image: 'ilyalisov/data-analyser-microservice:latest'
+    image: 'extoozy/data-analyzer-service:latest'
     networks:
       - app
     depends_on:
@@ -47,7 +47,7 @@ services:
       - '8082:8082'
 
   store:
-    image: 'ilyalisov/data-store-microservice:latest'
+    image: 'extoozy/data-store-service:latest'
     networks:
       - app
     depends_on:
@@ -131,10 +131,6 @@ services:
       - OFFSET_STORAGE_TOPIC=my_connect_offsets
       - STATUS_STORAGE_TOPIC=my_connect_statuses
     user: root
-#    command:
-#      - bash
-#      - -c
-#      - "cd /on-startup; ls; ./run.sh"
     volumes:
       - debezium-data:/debezium/data
       - ./conf/:/on-startup/
