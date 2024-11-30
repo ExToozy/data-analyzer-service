@@ -109,8 +109,10 @@ services:
     image: "debezium/connect:2.4.0.Final"
     networks:
       - app
+    depends_on:
+      - kafka
     environment:
-      - BOOTSTRAP_SERVERS=${KAFKA_BOOSTRAP_SERVERS}
+      - BOOTSTRAP_SERVERS=${KAFKA_BOOTSTRAP_SERVERS}
       - GROUP_ID=${DEBEZIUM_KAFKA_BROKER_ID}
       - CONFIG_STORAGE_TOPIC=my_connect_configs
       - OFFSET_STORAGE_TOPIC=my_connect_offsets
@@ -118,4 +120,4 @@ services:
     user: root
     volumes:
       - debezium-data:/debezium/data
-      - ./conf/:on-startup/
+      - ./conf/:/on-startup/
