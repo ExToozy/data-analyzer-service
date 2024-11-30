@@ -14,7 +14,7 @@ public class KafkaDataService implements DataService {
     private final DataRepository dataRepository;
 
     public void handle(Data data){
-        dataRepository.save(data);
-        log.info("Data object {} was saved", data);
+        Data saved = dataRepository.save(data);
+        log.info("Data object {} saved", saved);
     }
 }
