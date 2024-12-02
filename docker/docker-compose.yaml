@@ -29,7 +29,7 @@ services:
     ports:
       - '8081:8081'
 
-  analyser:
+  store:
     image: 'extoozy/data-store-service:latest'
     networks:
       - app
@@ -46,7 +46,7 @@ services:
     ports:
       - '8082:8082'
 
-  store:
+  analyser:
     image: 'extoozy/data-analyser-service:latest'
     networks:
       - app
