@@ -1,10 +1,10 @@
-package ru.extoozy.dataanalyzerservice.service;
+package ru.extoozy.datastoreservice.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import ru.extoozy.dataanalyzerservice.model.Data;
-import ru.extoozy.dataanalyzerservice.repository.DataRepository;
+import ru.extoozy.datastoreservice.model.Data;
+import ru.extoozy.datastoreservice.repository.DataRepository;
 
 @Service
 @Slf4j

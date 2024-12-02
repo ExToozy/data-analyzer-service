@@ -1,4 +1,4 @@
-package ru.extoozy.dataanalyzerservice.model;
+package ru.extoozy.datastoreservice.model;
 
 
 import jakarta.persistence.Column;

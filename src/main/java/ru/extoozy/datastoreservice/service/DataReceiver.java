@@ -1,4 +1,4 @@
-package ru.extoozy.dataanalyzerservice.service;
+package ru.extoozy.datastoreservice.service;
 
 public interface DataReceiver {
     void fetch();

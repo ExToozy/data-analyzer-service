@@ -20,7 +20,7 @@ jobs:
       - name: Build and Push to Docker Hub
         uses: mr-smithers-excellent/docker-build-push@v5
         with:
-          image: ${{ secrets.DOCKERHUB_USERNAME }}/data-analyzer-service
+          image: ${{ secrets.DOCKERHUB_USERNAME }}/data-store-service
           tags: 0.0.$GITHUB_RUN_NUMBER, latest
           dockerfile: Dockerfile
           registry: docker.io

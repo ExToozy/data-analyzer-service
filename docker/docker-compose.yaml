@@ -30,7 +30,7 @@ services:
       - '8081:8081'
 
   analyser:
-    image: 'extoozy/data-analyzer-service:latest'
+    image: 'extoozy/data-store-service:latest'
     networks:
       - app
     depends_on:
@@ -47,7 +47,7 @@ services:
       - '8082:8082'
 
   store:
-    image: 'extoozy/data-store-service:latest'
+    image: 'extoozy/data-analyser-service:latest'
     networks:
       - app
     depends_on:

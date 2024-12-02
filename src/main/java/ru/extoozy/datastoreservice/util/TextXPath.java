@@ -1,4 +1,4 @@
-package ru.extoozy.dataanalyzerservice.util;
+package ru.extoozy.datastoreservice.util;
 
 import com.jcabi.xml.XML;
 import lombok.RequiredArgsConstructor;

@@ -1,4 +1,4 @@
-package ru.extoozy.dataanalyzerservice.config;
+package ru.extoozy.datastoreservice.config;
 
 import com.jcabi.xml.XML;
 import lombok.RequiredArgsConstructor;
@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import reactor.kafka.receiver.KafkaReceiver;
 import reactor.kafka.receiver.ReceiverOptions;
-import ru.extoozy.dataanalyzerservice.util.TextXPath;
+import ru.extoozy.datastoreservice.util.TextXPath;
 
 import java.util.HashMap;
 import java.util.List;

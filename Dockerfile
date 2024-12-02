@@ -12,6 +12,6 @@ RUN gradle clean build --no-daemon --refresh-dependencies --stacktrace -Dorg.gra
 
 FROM openjdk:17-jdk-slim
 WORKDIR /app
-COPY --from=build /app/build/libs/data-analyzer-service-0.0.1-SNAPSHOT.jar app.jar
+COPY --from=build /app/build/libs/data-store-service-0.0.1-SNAPSHOT.jar app.jar
 EXPOSE 8082
 ENTRYPOINT ["java", "-jar", "app.jar"]
